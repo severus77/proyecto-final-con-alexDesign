@@ -1,0 +1,689 @@
+*, ::after, ::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+}
+
+
+.contenedor{
+    max-width: 1000px;
+    width: 90%;
+    padding: 80px 0px;
+    margin: auto;
+    overflow: hidden;
+}
+
+h2{
+    font-size: 30px;
+    padding-bottom: 20px;
+}
+p{
+color: #774c4c;
+font-weight: 300;}
+/* menu de navegación */
+
+
+
+
+/* header start */
+
+header{
+    height: 700px;
+    width: 100%;
+    position: relative;
+    
+    background: #8d2de2c7;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to top, #4b00e08f, #8d2de2de);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to top, #4b00e079, #8d2de2c7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+/* contenido-header  start*/
+
+.contenido-header{
+    display: flex;
+ justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 550px;
+    margin: auto;
+}
+
+.texto-header{
+   width: 49%;
+   color: #fff;
+   transform: translate(0);
+    opacity: 1;
+   
+    animation: animacion2 1s ease-out;
+}
+
+.texto-header h1{
+font-size: 60px;
+}
+
+.texto-header h2{
+    margin-bottom: 25px;
+    font-weight: 300;
+}
+
+.texto-header a{
+    text-decoration: none;
+    color: #fff;
+    border: solid 1px ;
+    border-radius: 8px;
+    padding: 5px 30px;
+}
+
+
+.imagen-header{
+    width: 50%;
+  padding-top:5px ;
+   
+}
+
+.imagen-header img{
+    width: 100%;  
+    transform: translate(0);
+    opacity: 1;
+    animation: animacion1 1s  ease-out;
+}
+
+
+@keyframes animacion1{
+0%{
+    transform: translate(100%,100%);
+    opacity: 0;
+}
+}
+
+@keyframes animacion2{
+    0%{
+        transform: translate(-100%,100%);
+        opacity: 0;
+    }
+}
+
+@keyframes imagenes{
+    0%{
+        transform:scale(0);
+    }
+}
+
+
+.wave-bottom{
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    height: 400px;
+    overflow: hidden;
+}
+
+/* contenido-header end */
+
+.menu-header{
+    cursor: pointer;
+  position: fixed;
+  right: 20px;
+  top:20px;
+  background: #fff;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.6);
+  z-index: 20;
+  transition: transform 0.2s;
+  transform:scale(1);
+  animation: escalar .6s 3 alternate;
+}
+
+.enlaces-header{
+width: 100%;
+height: 100%;
+background: linear-gradient(to right, #E100FF, #7F00FF);
+display: flex;
+flex-direction: column;
+justify-content: space-evenly;
+align-items: center;
+position: fixed;
+z-index: 3;
+clip-path: circle(0% at 100% 0%);
+transition: clip-path 1s;
+
+}
+
+.enlaces-header a{ 
+    color: #fff;
+    text-decoration: none;}
+.enlaces-header a:hover{
+    text-decoration: underline;
+}
+
+.extra-clase{
+    clip-path: circle(150% at 100% 0% );
+    transition: clip-path 1s;
+
+}
+
+
+.menu-nav:active{
+    transform: scale(0.9);
+}
+
+@keyframes escalar{
+    0%{
+        transform: scale(0.1);
+        transform: translatey(30px);
+        
+    }
+}
+
+/* header end */
+
+
+/* acerca-de start */
+
+.acerca-de {
+    text-align: center;
+}
+
+/* .acerca-de h2{
+    font-size: 30px;
+    padding-bottom: 20px;
+} */
+.parrafo-acerca-de{
+color: #774c4c;
+}
+
+.contenedor-acerca-de{
+    
+    display: flex;
+  justify-content: space-between;
+  text-align: center;
+  flex-wrap: wrap;
+ 
+}
+
+.card-acerca-de{
+     width: 30%;
+    background: #f2f2f2;
+   padding: 20px 10px;
+   border-radius: 10px;
+   margin-top: 40px;
+}
+
+.contenedor-acerca-de i{
+color: #8d2de2de;
+font-size: 100px;
+margin: 10px;
+}
+
+.contenedor-acerca-de h4{
+    margin-bottom: 10px;
+}
+/* .contenedor-acerca-de p{
+color: #a8a8a8;
+font-weight: 300;
+} */
+/* acerca-de end */
+
+
+/* servicios-contenedor start */
+
+.servicios-contenedor{
+  background: #f2f2f2;
+
+}
+
+.servicio{
+    display: flex;
+    justify-content: space-around;
+  padding: 80px 0px;
+  width: 90%;
+  margin: auto;
+
+}
+
+.imagen-servicio{
+    width: 50%;
+}
+.imagen-servicio img{
+width: 100%;
+}
+
+.contenido-servicio{
+    width: 45%;
+   
+}
+
+.servicio p{
+    width: 90%;
+    color: #774c4c;
+    text-align: justify;
+    margin-bottom: 30px;
+}
+
+.servicio ul{
+    margin-top: 20px;
+    padding-left:10px;
+    width: 60%;
+}
+
+.servicio li{
+   list-style: none;
+   margin-bottom: 20px;
+   color: #8d2de2de;
+   border-bottom: dotted 4px;
+   padding-bottom: 10px;
+   
+}
+
+
+/* servicios-contenedor end */
+
+
+/* galeria start */
+
+.galeria {
+text-align: center;
+}
+
+.galeria p{
+    margin-bottom: 40px;
+}
+
+.galerias{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    /* margin: auto; */
+}
+
+.galeria-img{
+    position: relative;
+    width: 32%;
+    height: 250px;
+    margin-bottom: 25px;
+   box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.61);
+   overflow: hidden;
+   /* a .galeria-img le damos un overflow:hidden para que todos los elementos que se salgan de la caja se oculten. */
+   
+   
+}
+
+.galeria-img img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+   transform: scale(1);
+   transition: transform 1s;
+   /* aca es lo mismo que explique en .extra-galeria */
+}
+
+.galeria-img img:hover{
+    transform: scale(1.3);
+    transition: transform 1s ;
+    /*  aca le decimos que cuando hagamos :hover a .galeria-img tenga un transform: scale(1.3); y una transición de 1s  */
+}
+
+.galeria-img:hover .extra-galeria{
+    transform: translate(0px);
+    transition: transform .8s ;
+    /* aca le estamos diciendo a cuando hagamos :hover en .galeria-img a .extra-galeria se translade a 0px del eje y  esa transición se haga en .8 segundos */
+   
+}
+.extra-galeria{
+  position: absolute;
+  top: 0;
+  background:#8d2de2de; 
+  width: 100%;
+  height: 100%;
+  transform: translate(100%,-100%);
+  transition: transform 1s;
+  /* a la caja de .extra-galeria le damos 
+  transform: translate(100%,-100%); para que la caja se traslade al 100% tanto del ejeY como ejeY.
+  También le dimos transition: transform 1s; para que cuando tenga que volver hacer el transform: translate(100%,-100%); la transición dure 1 segundo */
+ 
+}
+
+.extra-galeria p{
+    color: #fff;
+    text-align: left;
+}
+
+/* galeria end */
+
+
+
+/* tabla de precios start */
+
+:root{
+    --border: 1px dotted #585858;
+    --background-boton:rgba(75, 0, 224, 0.698);
+    --color:black;
+    --color-boton:#fff;
+    --color-precio:#585858;
+    --background-tabla:#fff;
+    --box-shadow: 0px 0px 5px rgba(0,0,0,.75);
+}
+
+
+.precios{
+    background:#f2f2f2;
+    text-align: center;  
+}
+
+.precios h2{
+padding-top: 80px;
+}
+
+.precios-tabla{
+    display: flex;
+    justify-content: space-around;
+    width: 90%;
+    
+}
+
+.tabla{
+    width: 29%;
+    padding: 40px 0px;
+   text-align: center;
+   background: var(--background-tabla);
+   border-radius: 5px;
+   box-shadow:var(--box-shadow); 
+ transform: scale(1);
+ transition: transform .7s;
+}
+
+.tabla h4{
+    color: var(--color);
+    font-size: 28px;
+    margin-bottom: 10px;
+   
+}
+
+.precio{
+    font-size:17px;
+    color: var(--color-precio);
+    font-weight: bold;
+    margin-bottom: 30px;
+
+}
+.precio span{
+    font-size: 23px;
+    font-weight: bold;
+}
+
+
+.tabla ul{
+    list-style: none;
+}
+
+.tabla li{
+    display: block;
+    margin-top: 20px;
+    padding-bottom: 20px ;
+    border-bottom: var(--border);
+    color: var(--color);
+   
+}
+
+
+.tabla a{
+    display: inline-block;
+    background: var(--background-boton);
+    color: var(--color-boton);
+    padding: 10px 15px;
+    border-radius: 10px;
+    margin-top: 40px;
+    text-decoration: none;
+   box-shadow:var(--box-shadow);
+}
+
+.tabla:hover{
+   --border: 1px dotted #fff;
+    --background-tabla:rgba(75, 0, 224, 0.698); ;
+    --color:#fff;
+    --color-precio:#fff;
+    --background-boton:#fff;
+    --color-boton:#000;
+    transform:scale(1.08);
+    transition: transform .7s
+}
+
+/* tabla de precios end */
+
+
+
+
+/* slider start */
+
+.slider-contenedor{
+width: 100%;
+height: 450px;
+margin:auto;
+padding-top: 50px;
+overflow: hidden;
+
+}
+
+.slider{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    transform: translate(0px);
+    transition: transform 1s;
+ 
+}
+
+.cont-slider{
+ flex-shrink: 0;
+ width: 100%;
+ height: 100%;
+display: flex;
+flex-direction: column ;
+align-items: center;
+justify-content: space-evenly;
+
+/* lo que hicimos acá fue darle un flex-box para que todos los elementos se pongaan uno a lado del otro. 
+Después le dimos un flex-direction:column para que todos los elementos se pongan en columna (esto hace que la ejeY este en el ejeX y viceversa.
+Siempre que le demos flex-direction: hay que acordarse que cambia el sentido de los ejes, el ejeY pasa al lugar del EjeX y viceversa.;
+Después le damos un align-items:center para que los elementos se pongan centrados (el align-Items trabaja sobre el el ejeY) */
+}
+
+
+.cont-slider img{
+    margin-top: 45px;
+width: 200px;
+height: 200px;
+border-radius: 100%;
+object-fit: cover;
+margin-bottom: 40px;
+vertical-align: top;
+
+
+} 
+
+.cont-slider h4{
+    color: rgba(75, 0, 224, 0.698);;
+}
+.cont-slider p{
+    font-style: italic;
+ font-size: 17px;
+  color:#585858;
+  text-align: center;
+  font-weight: 400;
+  width: 80%;
+
+}
+
+/* footer start */
+footer{
+    height: 360px;
+    background: rgba(75, 0, 224, 0.698); ;
+    display: flex;
+    justify-content: space-around;
+align-items: center;
+margin: auto;
+}
+
+
+footer{
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.footer-contact{
+   width: 30%;
+   color: #fff;
+}
+.footer-contact h4{
+    font-size: 25px;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+ .footer-contact p{
+    color: #fff;
+    margin-bottom: 10px;
+    font-style: italic;
+
+}
+
+.footer-contact ul{
+    display: flex;
+}
+.footer-contact li{
+  font-size: 21px;
+  margin-right: 20px;
+  margin-top: 15px;
+    background: black;
+    padding: 10px 15px;
+    border-radius: 100%;
+    transform: none;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    list-style: none;
+    cursor: pointer;
+    color: #fff;
+}
+.footer-contact i{
+    color: #fff;
+}
+
+
+.footer-logo {
+    width: 27%;
+    vertical-align: top;
+}
+
+.footer-logo img{
+    width: 100%;
+    object-fit: cover;
+}
+
+
+/* responsive design */
+
+@media screen and (max-width:800px) {
+ header{
+     height: auto;
+}
+
+.contenido-header{ 
+    height: 700px;
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+}
+.imagen-header{
+    width: 90%;
+}
+.texto-header{
+    width: 90%;
+    text-align: center;
+}
+
+.texto-header h1{
+    font-size: 21px;
+}
+.texto-header h2{
+    font-size: 20px;
+}
+
+.contenedor-acerca-de {
+    flex-direction: column;
+}
+
+.card-acerca-de{
+    width: 90%;
+    margin: auto;
+    margin-top: 30px;
+}
+
+.servicio{
+    flex-direction: column;
+}
+.imagen-servicio{
+    width: 100%;
+    margin: auto;
+}
+.contenido-servicio{
+    width: 100%;
+}
+ .contenido-servicio h2{
+    font-size: 28px;
+}
+.contenido-servicio p{
+    margin: auto;
+}
+
+.contenido-servicio ul{
+    width: 100%;
+}
+
+.galerias{
+    flex-direction: column;
+}
+.galeria-img{
+    width: 100%;
+}
+
+.precios-tabla{
+    flex-direction: column;
+}
+.tabla{
+    width: 90%;
+    margin: auto;
+    margin-bottom: 25px;
+  
+}
+
+
+
+footer{
+   flex-direction: column;
+  
+}
+.footer-contact {
+   width: 40%;
+  text-align: center;
+}
+
+
+.footer-logo{
+    width: 40%;
+
+}
+}
